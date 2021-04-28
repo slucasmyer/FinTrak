@@ -1,0 +1,37 @@
+<h1>POST Request Received!</h1>
+<table>
+	<thead>
+  		<tr>
+   			{{#each dataList.[0]}}
+      			<th>{{@key}}</th>
+    		{{/each}}
+  		</tr>
+	</thead>
+	<tbody>
+  		{{#each dataList}}
+    		<tr>
+    			{{#each this}}
+        			<td>{{this}}</td>
+      			{{/each}}
+    		</tr>
+  		{{/each}}
+	</tbody>
+</table>
+<table>
+	<thead>
+  		<tr>
+   			{{#each dataList.[0]}}
+      			<th>{{@key}}</th>
+    		{{/each}}
+  		</tr>
+	</thead>
+	<tbody>
+  		{{#each dataList}}
+    		<tr>
+    			{{#each this}}
+        			<td>{{this}}</td>
+      			{{/each}}
+    		</tr>
+  		{{/each}}
+	</tbody>
+</table>
