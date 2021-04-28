@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static('views'));
+app.use(express.static('public'));
 
 app.engine('handlebars', handlebars.engine);
 
@@ -16,20 +17,20 @@ app.get('/', function (req, res) {
 res.sendFile(__dirname + '/index.html');
 });
 
-app.get('/blog', function (req, res) {
-res.sendFile(__dirname + '/blog.html');
+app.get('/accounts', function (req, res) {
+res.sendFile(__dirname + '/accounts.html');
 });
 
-app.get('/participate', function (req, res) {
-res.sendFile(__dirname + '/participate.html');
+app.get('/assets', function (req, res) {
+res.sendFile(__dirname + '/assets.html');
 });
 
-app.get('/downloads', function (req, res) {
-res.sendFile(__dirname + '/downloads.html');
+app.get('/settings', function (req, res) {
+res.sendFile(__dirname + '/settings.html');
 });
 
-app.get('/homeGen', function (req, res) {
-res.sendFile(__dirname + '/homeGen.js');
+app.get('/dashboard', function (req, res) {
+res.sendFile(__dirname + '/index.html');
 });
 
 app.use(function(req,res){
